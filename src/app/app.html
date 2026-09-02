@@ -1,0 +1,262 @@
+<div class="portfolio-container" [class.light-theme]="!isDarkMode">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" [class.dark-nav]="isDarkMode">
+    <div class="nav-container">
+      <a href="#" class="logo" aria-label="Home">&lt;Arham.dev /&gt;</a>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-menu-btn" (click)="isMenuOpen = !isMenuOpen" [attr.aria-expanded]="isMenuOpen"
+        aria-label="Toggle Navigation Menu">
+        {{ isMenuOpen ? '✕' : '☰' }}
+      </button>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" [class.active]="isMenuOpen">
+        <li><a class="nav-item" (click)="scrollToSection('about')">About</a></li>
+        <li><a class="nav-item" (click)="scrollToSection('skills')">Skills</a></li>
+        <li><a class="nav-item" (click)="scrollToSection('projects')">Projects</a></li>
+        <li><a class="nav-item" (click)="scrollToSection('contact')">Contact</a></li>
+
+        <li class="nav-divider"></li>
+
+        <!-- Social Links -->
+        <li>
+          <a [href]="githubUrl" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Profile">
+            <span class="icon">💻</span>
+            <span class="link-text">GitHub</span>
+          </a>
+        </li>
+        <li>
+          <a [href]="linkedinUrl" target="_blank" rel="noopener noreferrer" class="social-link"
+            title="LinkedIn Profile">
+            <span class="icon">🔗</span>
+            <span class="link-text">LinkedIn</span>
+          </a>
+        </li>
+
+        <!-- Theme Switcher -->
+        <li>
+          <button class="theme-toggle-btn" (click)="toggleTheme()"
+            [attr.aria-label]="isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'">
+            <span>{{ isDarkMode ? '☀️' : '🌙' }}</span>
+            <span class="theme-text">{{ isDarkMode ? 'Light' : 'Dark' }}</span>
+          </button>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-container">
+
+      <!-- Profile Image Container -->
+      <div class="hero-img-wrapper">
+        <img src="profile.PNG" alt="Muhammad Arham Khan" class="hero-profile-img" />
+      </div>
+
+      <!-- Hero Content -->
+      <div class="hero-content">
+        <span class="badge">Open for Freelance & Opportunities</span>
+        <h1>Hi, I'm <span class="highlight">Muhammad Arham Khan</span></h1>
+        <h2>Software Developer & .NET Backend Specialist</h2>
+        <p>
+          Building scalable backend solutions with ASP.NET Core & C#, alongside modern frontend interfaces in Angular
+          and cross-platform mobile apps with Flutter.
+        </p>
+
+        <!-- Core Action Buttons -->
+        <div class="hero-buttons">
+          <a href="Muhammad_Arham_Khan_Resume.pdf" download class="btn btn-primary">📄 Download Resume</a>
+          <a href="#projects" class="btn btn-secondary">View Projects</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- About, Experience & Education Section -->
+<section id="about" #aboutSection class="section">
+  <h2 class="section-title">About & Career Path</h2>
+  <div class="about-grid">
+
+    <!-- Summary -->
+    <div class="about-card pop-animated">
+      <h3>Professional Summary</h3>
+      <p>
+        Dedicated Software Developer with expertise in building secure RESTful APIs, integrating relational databases
+        (SQL Server, MySQL), and optimizing server-side logic. Passionate about clean architecture, maintainability,
+        and efficient code practices.
+      </p>
+    </div>
+
+    <!-- Experience Block -->
+    <div class="about-card pop-animated">
+      <h3>Work Experience</h3>
+      <ul class="timeline">
+        <li>
+          <strong>Software Engineering Intern</strong>
+          <span>Digisoft Transformation Solutions Pvt. Ltd. (Ongoing)</span>
+          <p class="timeline-desc">Working on enterprise software solutions using .NET Core and Angular.</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Education Block -->
+    <div class="about-card pop-animated">
+      <h3>Education & Credentials</h3>
+      <ul class="timeline">
+        <li>
+          <strong>Software Engineering (Diploma)</strong>
+          <span>Aptech Computer Education - Karachi (Mar 2026)</span>
+        </li>
+        <li>
+          <strong>HSC In Pre-Engineering</strong>
+          <span>The Ideal Higher Secondary School - Karachi (2023)</span>
+        </li>
+        <li>
+          <strong>Hifz-e-Quran</strong>
+          <span>Madrasa-Tul-Madina - Karachi (2019)</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- Technical Skills Section -->
+<section id="skills" #skillsSection class="section">
+  <h2 class="section-title">Technical Expertise</h2>
+  <div class="skills-grid">
+
+    <div class="skill-card pop-animated">
+      <h3>Languages & Frontend</h3>
+      <div class="tags">
+        <span><i class="dev-icon">⚡</i> C#</span>
+        <span><i class="dev-icon">📘</i> TypeScript</span>
+        <span><i class="dev-icon">🎯</i> Dart</span>
+        <span><i class="dev-icon">🐘</i> PHP</span>
+        <span><i class="dev-icon">💛</i> JavaScript</span>
+        <span><i class="dev-icon">🌐</i> HTML5 / CSS3</span>
+      </div>
+    </div>
+
+    <div class="skill-card pop-animated">
+      <h3>Frameworks & Tools</h3>
+      <div class="tags">
+        <span><i class="dev-icon">⚙️</i> ASP.NET Core</span>
+        <span><i class="dev-icon">🅰️</i> Angular</span>
+        <span><i class="dev-icon">📱</i> Flutter</span>
+        <span><i class="dev-icon">🔥</i> Firebase</span>
+        <span><i class="dev-icon">📦</i> Git & GitHub</span>
+      </div>
+    </div>
+
+    <div class="skill-card pop-animated">
+      <h3>Databases & Architecture</h3>
+      <div class="tags">
+        <span><i class="dev-icon">🗄️</i> SQL Server</span>
+        <span><i class="dev-icon">🐬</i> MySQL</span>
+        <span><i class="dev-icon">🔗</i> RESTful APIs</span>
+        <span><i class="dev-icon">🏛️</i> Clean Architecture</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Featured Projects Section -->
+<section id="projects" #projectsSection class="section">
+  <h2 class="section-title">Featured Projects</h2>
+
+  <div class="projects-grid">
+    @for (project of projects; track project.title) {
+    <div class="project-card pop-animated">
+      <div class="project-img-wrapper">
+        <img [src]="project.image" [alt]="project.title" class="project-img" />
+      </div>
+
+      <div class="project-body">
+        <span class="tech-tag">{{ project.tech }}</span>
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.description }}</p>
+
+        <button class="details-toggle-btn" (click)="toggleDetails(project)">
+          See Details ▼
+        </button>
+
+        <div class="project-actions">
+          <a [href]="project.github" target="_blank" class="action-link"><span>💻</span> Code</a>
+          <a [href]="project.demo" target="_blank" class="action-link"><span>🚀</span> Live Demo</a>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+
+  <!-- Modal Overlay -->
+  @for (project of projects; track project.title) {
+  @if (project.showDetails) {
+  <div class="modal-overlay" (click)="toggleDetails(project)">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+
+      <!-- Red 'X' Close Button -->
+      <button class="close-btn" (click)="toggleDetails(project)" title="Close">&times;</button>
+
+      <h3>{{ project.title }}</h3>
+      <span class="tech-tag">{{ project.tech }}</span>
+
+      <div class="project-extra-details">
+        <h4>Key Features & Technical Highlights:</h4>
+        <ul>
+          @for (detail of project.details; track detail) {
+          <li>{{ detail }}</li>
+          }
+        </ul>
+      </div>
+
+      <div class="modal-actions" style="display: flex; gap: 10px; margin-top: 20px;">
+        <a [href]="project.github" target="_blank" class="btn btn-secondary" style="flex: 1; text-align: center;">
+          💻 View Source Code
+        </a>
+        <a [href]="project.demo" target="_blank" class="btn btn-primary" style="flex: 1; text-align: center;">
+          🚀 Launch Live Demo
+        </a>
+      </div>
+    </div>
+  </div>
+  }
+  }
+</section>
+
+<!-- Contact & Footer Section -->
+<section id="contact" #contactSection class="section contact-section">
+  <h2 class="section-title">Get In Touch</h2>
+  <p class="contact-sub">Feel free to reach out for career opportunities or project inquiries.</p>
+
+  <!-- Interactive Direct Action Cards -->
+  <div class="contact-cards">
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=arhumk72@gmail.com" class="contact-box pop-animated">
+      <span class="icon">📧</span>
+      <span>arhumk72@gmail.com</span>
+    </a>
+    <a href="tel:+923133911090" class="contact-box pop-animated">
+      <span class="icon">📞</span>
+      <span>+92 313 3911090</span>
+    </a>
+    <div class="contact-box pop-animated">
+      <span class="icon">📍</span>
+      <span>Karachi, Pakistan</span>
+    </div>
+  </div>
+<span class="nav-divider"></span>
+ 
+</section>
+
+ <footer #footerSection>
+  <p class="pop-animated">© 2026 Muhammad Arham Khan. All rights reserved.</p>
+</footer>
+</div>

@@ -1,0 +1,56 @@
+/* Page par smooth scrolling enable karne ke liye */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Jab navbar par click ho to section navbar ke niche dabne se bachane ke liye */
+section {
+  scroll-margin-top: 90px; /* Isko apni navbar ki height ke hisab se kam ya ziada kar sakte hain */
+}
+/* ==========================================
+   GLOBAL SCROLL POP-UP ANIMATIONS
+   ========================================== */
+
+/* Base Animation State */
+.pop-animated {
+  opacity: 0;
+  transform: scale(0.85) translateY(30px);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  will-change: transform, opacity;
+}
+
+/* Active Visible State */
+.pop-animated.is-visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* Staggered Delay for Grid Items (One-by-One Pop-up Effect) */
+.about-grid .about-card:nth-child(1).is-visible,
+.skills-grid .skill-card:nth-child(1).is-visible,
+.projects-grid .project-card:nth-child(1).is-visible { 
+  transition-delay: 0.1s; 
+}
+
+.about-grid .about-card:nth-child(2).is-visible,
+.skills-grid .skill-card:nth-child(2).is-visible,
+.projects-grid .project-card:nth-child(2).is-visible { 
+  transition-delay: 0.25s; 
+}
+
+.about-grid .about-card:nth-child(3).is-visible,
+.skills-grid .skill-card:nth-child(3).is-visible,
+.projects-grid .project-card:nth-child(3).is-visible { 
+  transition-delay: 0.4s; 
+}
+
+.projects-grid .project-card:nth-child(4).is-visible { 
+  transition-delay: 0.55s; 
+}
+/* Contact Cards Staggered Delays */
+.contact-cards .contact-box:nth-child(1).is-visible { transition-delay: 0.1s; }
+.contact-cards .contact-box:nth-child(2).is-visible { transition-delay: 0.25s; }
+.contact-cards .contact-box:nth-child(3).is-visible { transition-delay: 0.4s; }
+
+/* Footer Delay */
+footer p.is-visible { transition-delay: 0.2s; }
