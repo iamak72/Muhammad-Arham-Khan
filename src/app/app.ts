@@ -85,7 +85,7 @@ export class App implements AfterViewInit {
       tech: 'Flutter & Firebase',
       description: 'Premium mobile shopping app featuring secure login, browsing, wishlists, and Admin Panel.',
       image: 'https://placehold.co/600x350/161e2e/38bdf8?text=Watch+Hub+App',
-      github: 'https://github.com/iamak72',
+      github: 'https://github.com/iamak72/watch-hub-app/releases/download/v1.0.4/app-release.apk',
       demo: '#',
       details: [
         'Secure User Authentication via Firebase Auth (Email/Password & Google Sign-In)',

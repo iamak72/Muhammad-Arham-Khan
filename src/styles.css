@@ -1,11 +1,10 @@
-/* Page par smooth scrolling enable karne ke liye */
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Jab navbar par click ho to section navbar ke niche dabne se bachane ke liye */
 section {
-  scroll-margin-top: 90px; /* Isko apni navbar ki height ke hisab se kam ya ziada kar sakte hain */
+  scroll-margin-top: 90px; 
 }
 /* ==========================================
    GLOBAL SCROLL POP-UP ANIMATIONS
